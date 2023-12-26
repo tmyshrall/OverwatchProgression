@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overwatch Progress Tracker</title>
+  <link rel="icon" href="images/scrollIcon.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="top-sidebar">
+    <text href="#play-of-the-games" onclick="scrollToSection('play-of-the-games');">Play of the Games</text>
+    <text href="#hero-achievements" onclick="scrollToSection('hero-achievements');">Hero Achievements</text>
+    <text href="#hero-progression" onclick="scrollToSection('hero-progression');">Hero Progression</text>
+  </div>
+  <div class="border">
+    <img style="margin-top: 10%;" class="title" src="images/overwatchText.png">
+    <img style="height: 85%; padding-left: 5%;" class="title" src="images/titleText.png">
+    <img style="height: 85%; padding-left: 6%; margin-bottom: 25%;" class="title" src="images/titleText(2).png">
+  </div>
+  <h3 id="play-of-the-games" class="titleText">Play of the Games</h3>
+  <div class="border">
+    <div class="POTGimages">
+      <img src="images/ana.png" onclick="toggleImage(this)">
+      <img src="images/ashe.png" onclick="toggleImage(this)">
+      <img src="images/baptiste.png" onclick="toggleImage(this)">
+      <img src="images/bastion.png" onclick="toggleImage(this)">
+      <img src="images/brigitte.png" onclick="toggleImage(this)">
+      <img src="images/cassidy.png" onclick="toggleImage(this)">
+      <img src="images/doomfist.png" onclick="toggleImage(this)">
+      <img src="images/dva.png" onclick="toggleImage(this)">
+      <img src="images/echo.png" onclick="toggleImage(this)">
+      <img src="images/genji.png" onclick="toggleImage(this)">
+      <img src="images/hanzo.png" onclick="toggleImage(this)">
+      <img src="images/illari.png" onclick="toggleImage(this)">
+      <img src="images/junkerQueen.png" onclick="toggleImage(this)">
+      <img src="images/junkrat.png" onclick="toggleImage(this)">
+      <img src="images/kiriko.png" onclick="toggleImage(this)">
+      <img src="images/lifeweaver.png" onclick="toggleImage(this)">
+      <img src="images/lucio.png" onclick="toggleImage(this)">
+      <img src="images/mauga.png" onclick="toggleImage(this)">
+      <img src="images/mercy.png" onclick="toggleImage(this)">
+      <img src="images/mei.png" onclick="toggleImage(this)">
+      <img src="images/moira.png" onclick="toggleImage(this)">
+      <img src="images/orisa.png" onclick="toggleImage(this)">
+      <img src="images/pharah.png" onclick="toggleImage(this)">
+      <img src="images/ramattra.png" onclick="toggleImage(this)">
+      <img src="images/reaper.png" onclick="toggleImage(this)">
+      <img src="images/reinhardt.png" onclick="toggleImage(this)">
+      <img src="images/roadhog.png" onclick="toggleImage(this)">
+      <img src="images/sigma.png" onclick="toggleImage(this)">
+      <img src="images/sojourn.png" onclick="toggleImage(this)">
+      <img src="images/soldier76.png" onclick="toggleImage(this)">
+      <img src="images/sombra.png" onclick="toggleImage(this)">
+      <img src="images/symmetra.png" onclick="toggleImage(this)">
+      <img src="images/torbjorn.png" onclick="toggleImage(this)">
+      <img src="images/tracer.png" onclick="toggleImage(this)">
+      <img src="images/widowmaker.png" onclick="toggleImage(this)">
+      <img src="images/winston.png" onclick="toggleImage(this)">
+      <img src="images/wreackingBall.png" onclick="toggleImage(this)">
+      <img src="images/zarya.png" onclick="toggleImage(this)">
+      <img src="images/zenyatta.png" onclick="toggleImage(this)">
+    </div>
+  </div>
+  <h3 id="hero-achievements" class="titleText">Hero Achievements</h3>
+  <div class="border">
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteAna.png">
+      <h3 class="adchieveDesc">Get 4 kills or assists with a single use of Ana's Nano Boost in Quick or Competitive Play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelAna.png">
+      <h3 class="adchieveDesc">Interrupt an enemy ultimate ability with Ana's Sleep Dart in Quick or Competitive Play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteAshe.png">
+      <h3 class="adchieveDesc">Get a killing blow as Ashe on an enemy knocked into the air by B.O.B. in Quick or Competitive Play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelAshe.png">
+      <h3 class="adchieveDesc">Kill an enemy by shooting Ashe's Dynamite from at least 30 meters away in Quick or Competitive Play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteBap.png">
+      <h3 class="adchieveDesc">Amplify 2000 combined damage and healing without dying as Baptiste in Quick or Competitive Play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelBap.png">
+      <h3 class="adchieveDesc">Prevent 4 deaths with a single use of Baptiste's Immortality Field in Quick or Competitive Play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteBastion.png">
+      <h3 class="adchieveDesc">Kill 3 enemies with a single use of Bastion's Configuration: Artillery in Quick or Competitive Play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelBastion.png">
+      <h3 class="adchieveDesc">Kill 2 enemies in each of Bastion's configurations without dying in Quick or Competitive Play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteBrig.png">
+      <h3 class="adchieveDesc">Kill an airborne enemy with Brigitte's Whip Shot in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelBrig.png">
+      <h3 class="adchieveDesc">Get a Killing Blow with Brigitte's Shield Bash in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteCas.png">
+      <h3 class="adchieveDesc">Get 4 killing blows with a single use of McCree's Deadeye in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelCas.png">
+      <h3 class="adchieveDesc">Get 2 Killing Blows with a single use of Cassidy's Magnetic Grenade in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteDF.png">
+      <h3 class="adchieveDesc">Hit 4 enemies with a single use of Doomfist's Meteor Strike in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelDF.png">
+      <h3 class="adchieveDesc">Slam 3 Enemys into a wall with Doomfist's Empowered Rocket Punch in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteDva.png">
+      <h3 class="adchieveDesc">Kill 4 enemies with a single use of D.Va's Self-Destruct in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelDva.png">
+      <h3 class="adchieveDesc">Prevent 1250 damage with a single use of D.Va's Defense Matrix in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteEcho.png">
+      <h3 class="adchieveDesc">Use 2 other heroes' ultimates as Echo without dying in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelEcho.png">
+      <h3 class="adchieveDesc">Earn 2 killing blows with a single use of Echo's Focusing Beam in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteGenji.png">
+      <h3 class="adchieveDesc">Kill 4 enemies with a single use of Genji's Dragonblade in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelGenji.png">
+      <h3 class="adchieveDesc">Kill 2 Enemies with a single use of Genji's Deflection in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteHanzo.png">
+      <h3 class="adchieveDesc">Kill 4 enemies with one of Hanzo's Spirit Dragons in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelHanzo.png">
+      <h3 class="adchieveDesc">Get 3 killing blows with a single use of Hanzo's Storm Arrows in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteIllari.png">
+      <h3 class="adchieveDesc">Detonate 3 Sunstruck enemies after a single use of Illari's Captive Sun. (Excludes Total Mayhem and co-op modes.)</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelIllari.png">
+      <h3 class="adchieveDesc">Restore 8000 health with Illari's Healing Pylon in a single game. (Exclides Total Mayhem and co-op modes.)</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteJQ.png">
+      <h3 class="adchieveDesc">Use Junker Queen's Jagged Blade and Carnage to pull and kill an enemy in Quick or Competitive Play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelJQ.png">
+      <h3 class="adchieveDesc">Have 7 of Junker Queen's wounds active on enemies at the same time in Quick or Competitive Play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteJR.png">
+      <h3 class="adchieveDesc">	Kill 4 enemies with a single use of Junkrat's RIP-Tire in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelJR.png">
+      <h3 class="adchieveDesc">Knock an enemy into your steel trap using Junkrat's Concussion Mine in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteKiri.png">
+      <h3 class="adchieveDesc">Restore 1500 health and land 5 critical hits without dying as Kiriko in Quick or Competitive Play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelKiri.png">
+      <h3 class="adchieveDesc">Cleanse 5 negative effects with one use of Kiriko's Protection Suzu in Quick or Competitive Play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteLW.png">
+      <h3 class="adchieveDesc">Restore 1200 Health with a Single use of Lifeweaver's Tree of Life in Quick or Competitive Play</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelLW.png">
+      <h3 class="adchieveDesc">Prevent 3 Deaths with Lifeweaver's Life Grip without dying yourself in Quick or Competitive Play</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteLucio.png">
+      <h3 class="adchieveDesc">Block 900 damage with a single use of Lúcio's Sound Barrier in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelLucio.png">
+      <h3 class="adchieveDesc">	Get 3 killing blows while Wall Riding as Lúcio without dying in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteMauga.png">
+      <h3 class="adchieveDesc">Trap and eliminate 3 enemies with a single use of Mauga's Cage Fight</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelMauga.png">
+      <h3 class="adchieveDesc">Deal 900 combined healing and damage with a single one of Mauga's Cardiac Overdrive.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteMercy.png">
+      <h3 class="adchieveDesc">Resurrect 5 players as Mercy without dying in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelMercy.png">
+      <h3 class="adchieveDesc">Restore 150 health for 4 players without dying as Mercy in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteMei.png">
+      <h3 class="adchieveDesc">Freeze 4 enemies at once with Mei in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelMei.png">
+      <h3 class="adchieveDesc">Block 1000 damage with a single use of Mei's Ice Wall in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteMoria.png">
+      <h3 class="adchieveDesc">Hit 6 targets simultaneously with Moira's Coalescence in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelMoria.png">
+      <h3 class="adchieveDesc">Fully deplete both types of Moira's Biotic Orb without dying in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteOrisa.png">
+      <h3 class="adchieveDesc">Kill 3 enemys with a single use of Orisa's Terra Surge in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelOrisa.png">
+      <h3 class="adchieveDesc">	Knock a Enemy to their death using Orisa's Energy Javelin in Quick or Competitive Play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteParah.png">
+      <h3 class="adchieveDesc">Kill 4 enemies in a row without touching the ground as Pharah in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelParah.png">
+      <h3 class="adchieveDesc">Knock an enemy to their death using Pharah's Concussive Blast in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteRam.png">
+      <h3 class="adchieveDesc">Eliminate 3 enemies in a single use of Ramattra's Annihilation in Quick or Competitive Play</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelRam.png">
+      <h3 class="adchieveDesc">Block 300 or more damage and survive in a single use of Nemesis Form in Quick or Competitive Play</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteReaper.png">
+      <h3 class="adchieveDesc">Kill 4 enemies with a single use of Reaper's Death Blossom in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelReaper.png">
+      <h3 class="adchieveDesc">Get 3 Solo Kills with a single clip of Reaper's Shotguns in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteRein.png">
+      <h3 class="adchieveDesc">Land Reinhardt's Fire Strike and Charge after an Earthshatter stun in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelRein.png">
+      <h3 class="adchieveDesc">Block 7500 damage with Reinhardt's Barrier Field without dying in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteRH.png">
+      <h3 class="adchieveDesc">Knock 2 enemies to their deaths with one use of Roadhog's Whole Hog in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelRH.png">
+      <h3 class="adchieveDesc">Interrupt an enemy Ultimate Ability with Roadhog's Hook in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteSigma.png">
+      <h3 class="adchieveDesc">Get 3 killing blows during a single use of Sigma's Gravitic Flux in Quick or Competitive Play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelSigma.png">
+      <h3 class="adchieveDesc">Gain 350 Shields with a single use of Sigma's Kinetic Grasp in Quick or Competitive Play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteSojourn.png">
+      <h3 class="adchieveDesc">Get 4 killing blows with a single use of Sojourn's Overclock in Quick or Competitive play</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelSojourn.png">
+      <h3 class="adchieveDesc">Kill an enemy with a charged Railgun headshot while sliding in Quick or Competitive Play</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteSoilder.png">
+      <h3 class="adchieveDesc">	Kill 4 enemies with a single use of Soldier: 76's Tactical Visor in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelSoilder.png">
+      <h3 class="adchieveDesc">Get 2 killing blows with a single use of Soldier: 76's Helix Rockets in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteSombra.png">
+      <h3 class="adchieveDesc">Hack 5 enemies at once as Sombra in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelSombra.png">
+      <h3 class="adchieveDesc">Hack 15 enemies without dying as Sombra in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteSym.png">
+      <h3 class="adchieveDesc">Teleport 15 allies in a single Quick or Competitive play game as Symmetra.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelSym.png">
+      <h3 class="adchieveDesc">Hit an enemy with 3 beams simultaneously as Symmetra in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteTorb.png">
+      <h3 class="adchieveDesc">Kill 4 enemies during a single use of Torbjörn's Molten Core in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelTorb.png">
+      <h3 class="adchieveDesc">Absorb 500 armor damage with Torbjörn's Overload without dying in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteTracer.png">
+      <h3 class="adchieveDesc">Stick 4 of Tracer's Pulse Bombs onto enemies in a single Quick or Competitive play game.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelTracer.png">
+      <h3 class="adchieveDesc">Recover 400 health using Tracer's Recall without dying in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteWidow.png">
+      <h3 class="adchieveDesc">Kill an enemy with a scoped headshot while airborne as Widowmaker in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelWidow.png">
+      <h3 class="adchieveDesc">Kill 4 enemies using Widowmaker's Venom Mine during a single Quick or Competitive play game.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteWinston.png">
+      <h3 class="adchieveDesc">Damage 5 enemies during a single use of Winston's Primal Rage in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelWinston.png">
+      <h3 class="adchieveDesc">Destroy 10 turrets or traps using Winston's Tesla Cannon without dying in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteBall.png">
+      <h3 class="adchieveDesc">Roll through 4 enemies within 2 seconds as Wrecking Ball in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelBall.png">
+      <h3 class="adchieveDesc">Absorb 1250 damage with Wrecking Ball's Adaptive Shield without dying in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteZarya.png">
+      <h3 class="adchieveDesc">Capture 4 enemies in a single use of Zarya's Graviton Surge in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelZarya.png">
+      <h3 class="adchieveDesc">Keep Zarya's Particle Cannon above 70 power for 60 seconds in Quick or Competitive play.</h3>
+    </div>
+    <div style="display: flex; align-items: center;">
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/cuteZen.png">
+      <h3 class="adchieveDesc">Restore 1250 Health with a single use of Zenyatta's Transcendence in Quick or Competitive play.</h3>
+      <input class="adchieveCheckBox" type="checkbox" onclick="toggleCheckbox(this)">
+      <img class="adchieveImages" src="images/pixelZen.png">
+      <h3 class="adchieveDesc">Get 4 kills or assists with Zenyatta's Orb of Discord within 6 seconds in Quick or Competitive play.</h3>
+    </div>
+  </div>
+  <h3 id="hero-progression" class="titleText">Hero Progression</h3>
+  <div class="border">
+    <div class="progressionContainer">
+      <input type="range" id="input1" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input1', 'number1')">
+      <span id="number1" class="value">0</span>
+      <img src="images/ana.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input2" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input2', 'number2')">
+      <span id="number2" class="value">0</span>
+      <img src="images/ashe.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input3" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input3', 'number3')">
+      <span id="number3" class="value">0</span>
+      <img src="images/baptiste.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input4" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input4', 'number4')">
+      <span id="number4" class="value">0</span>
+      <img src="images/bastion.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input5" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input5', 'number5')">
+      <span id="number5" class="value">0</span>
+      <img src="images/brigitte.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input6" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input6', 'number6')">
+      <span id="number6" class="value">0</span>
+      <img src="images/cassidy.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input7" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input7', 'number7')">
+      <span id="number7" class="value">0</span>
+      <img src="images/doomfist.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input8" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input8', 'number8')">
+      <span id="number8" class="value">0</span>
+      <img src="images/dva.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input9" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input9', 'number9')">
+      <span id="number9" class="value">0</span>
+      <img src="images/echo.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input10" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input10', 'number10')">
+      <span id="number10" class="value">0</span>
+      <img src="images/genji.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input11" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input11', 'number11')">
+      <span id="number11" class="value">0</span>
+      <img src="images/hanzo.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input12" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input12', 'number12')">
+      <span id="number12" class="value">0</span>
+      <img src="images/illari.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input13" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input13', 'number13')">
+      <span id="number13" class="value">0</span>
+      <img src="images/junkerQueen.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input14" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input14', 'number14')">
+      <span id="number14" class="value">0</span>
+      <img src="images/junkrat.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input15" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input15', 'number15')">
+      <span id="number15" class="value">0</span>
+      <img src="images/kiriko.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input16" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input16', 'number16')">
+      <span id="number16" class="value">0</span>
+      <img src="images/lifeweaver.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input17" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input17', 'number17')">
+      <span id="number17" class="value">0</span>
+      <img src="images/lucio.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input18" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input18', 'number18')">
+      <span id="number18" class="value">0</span>
+      <img src="images/mauga.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input19" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input19', 'number19')">
+      <span id="number19" class="value">0</span>
+      <img src="images/mercy.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input20" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input20', 'number20')">
+      <span id="number20" class="value">0</span>
+      <img src="images/mei.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input21" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input21', 'number21')">
+      <span id="number21" class="value">0</span>
+      <img src="images/moira.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input22" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input22', 'number22')">
+      <span id="number22" class="value">0</span>
+      <img src="images/orisa.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input23" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input23', 'number23')">
+      <span id="number23" class="value">0</span>
+      <img src="images/pharah.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input24" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input24', 'number24')">
+      <span id="number24" class="value">0</span>
+      <img src="images/ramattra.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input25" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input25', 'number25')">
+      <span id="number25" class="value">0</span>
+      <img src="images/reaper.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input26" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input26', 'number26')">
+      <span id="number26" class="value">0</span>
+      <img src="images/reinhardt.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input27" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input27', 'number27')">
+      <span id="number27" class="value">0</span>
+      <img src="images/roadhog.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input28" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input28', 'number28')">
+      <span id="number28" class="value">0</span>
+      <img src="images/sigma.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input29" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input29', 'number29')">
+      <span id="number29" class="value">0</span>
+      <img src="images/sojourn.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input30" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input30', 'number30')">
+      <span id="number30" class="value">0</span>
+      <img src="images/soldier76.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input31" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input31', 'number31')">
+      <span id="number31" class="value">0</span>
+      <img src="images/sombra.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input32" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input32', 'number32')">
+      <span id="number32" class="value">0</span>
+      <img src="images/symmetra.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input33" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input33', 'number33')">
+      <span id="number33" class="value">0</span>
+      <img src="images/torbjorn.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input34" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input34', 'number34')">
+      <span id="number34" class="value">0</span>
+      <img src="images/tracer.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input35" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input35', 'number35')">
+      <span id="number35" class="value">0</span>
+      <img src="images/widowmaker.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input36" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input36', 'number36')">
+      <span id="number36" class="value">0</span>
+      <img src="images/winston.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input37" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input37', 'number37')">
+      <span id="number37" class="value">0</span>
+      <img src="images/wreackingBall.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input38" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input38', 'number38')">
+      <span id="number38" class="value">0</span>
+      <img src="images/zarya.png" class="progressionImg">
+    </div>
+    <div class="progressionContainer">
+      <input type="range" id="input39" class="levelRange" min="0" max="200" value="0" oninput="updateNumber('input39', 'number39')">
+      <span id="number39" class="value">0</span>
+      <img src="images/zenyatta.png" class="progressionImg">
+    </div>
+  </div>
+  <script src="save.js"></script>
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
